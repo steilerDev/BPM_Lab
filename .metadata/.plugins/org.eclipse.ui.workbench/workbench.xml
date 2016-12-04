@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="71" version="2.0">
+<workbench progressCount="70" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="268" y="347">
+<window height="768" maximized="true" width="1024" x="15" y="9">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -45,6 +45,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -61,11 +62,14 @@
 <editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="HelloWorldArtifacts.wsdl" partName="HelloWorldArtifacts.wsdl" path="C:/Users/steiler/Documents/Repository/BPM_Lab/HelloWorld/rev0/HelloWorldArtifacts.wsdl" title="HelloWorldArtifacts.wsdl" tooltip="HelloWorld/rev0/HelloWorldArtifacts.wsdl" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloWorld/rev0/HelloWorldArtifacts.wsdl"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" partName="ConductOrder.bpel" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-sync/rev0/ConductOrder.bpel" title="ConductOrder.bpel" tooltip="T1-SOGShop-sync/rev0/ConductOrder.bpel" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" partName="ConductOrder.bpel" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-sync/rev0/ConductOrder.bpel" title="ConductOrder.bpel" tooltip="T1-SOGShop-sync/rev0/ConductOrder.bpel" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
 </editor>
 <editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" partName="ConductOrderArtifacts.wsdl" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl" title="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.bpel.ui.bpeleditor" name="myProcess.bpel" partName="myProcess.bpel" path="C:/Users/steiler/Documents/Repository/BPM_Lab/Playground-Feline/rev0/myProcess.bpel" title="myProcess.bpel" tooltip="Playground-Feline/rev0/myProcess.bpel" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Playground-Feline/rev0/myProcess.bpel"/>
 </editor>
 </editors>
 <views>
@@ -293,8 +297,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.contenttype" path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/HelloWorld/rev0/HelloWorld.bpel"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" path="/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/Playground-Feline/rev0/myProcess.bpel"/>
 </editors>
-<item historyLabel="HelloWorld.bpel" index="4"/>
 <item historyLabel="ConductOrder.bpel" index="2"/>
 <item historyLabel="HelloWorldArtifacts.wsdl" index="5"/>
 <item historyLabel="HelloWorld.bpel" index="4"/>
@@ -377,7 +381,8 @@
 <position info="not_deleted" x="5901" y="0"/>
 </item>
 <item historyLabel="ConductOrderArtifacts.wsdl" index="11"/>
-<item active="true" historyLabel="ConductOrder.bpel" index="6"/>
+<item historyLabel="ConductOrder.bpel" index="6"/>
+<item active="true" historyLabel="myProcess.bpel" index="12"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -395,6 +400,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="myProcess.bpel" tooltip="Playground-Feline/rev0/myProcess.bpel">
+<persistable path="/Playground-Feline/rev0/myProcess.bpel"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl">
 <persistable path="/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl"/>
 </file>
@@ -436,9 +444,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.apache.ode.deploy.ui.editors.ODEDeployMultiPageEditor" name="deploy.xml" tooltip="Playground/rev0/deploy.xml">
 <persistable path="/Playground/rev0/deploy.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="PlaygroundProcess.bpel" tooltip="Playground/rev0/PlaygroundProcess.bpel">
-<persistable path="/Playground/rev0/PlaygroundProcess.bpel"/>
 </file>
 </mruList>
 </workbench>

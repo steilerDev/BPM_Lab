@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpdb:Debug xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpdb="http://simtech.de/bpel/debug" processName="myProcess" processPath="C:\Users\bohnf\OneDrive - Hewlett Packard Enterprise\Services Computing\3. Semester\Business Process Management\Labs\workspace\mySecondAttempt\rev0\myProcess.bpel">
+  <globalBreakpoints/>
+  <localBreakpoints>
+    <breakpoint name="" targetXPath="/process/sequence[1]" targetName="main"/>
+  </localBreakpoints>
+</bpdb:Debug>
