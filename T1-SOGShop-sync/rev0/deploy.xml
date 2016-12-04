@@ -13,5 +13,8 @@
     <invoke partnerLink="CheckAvailabilityPL">
       <service name="FlowSOG:InventoryService" port="InventoryPort"/>
     </invoke>
+    <invoke partnerLink="OrderServicePL">
+      <service name="FlowSOG:OrderService" port="OrderPort"/>
+    </invoke>
   </process>
 </deploy>

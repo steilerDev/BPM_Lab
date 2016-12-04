@@ -30,6 +30,9 @@
                           partnerLinkType="tns:CheckAvailabilityPLT" 
                           partnerRole="CheckAvailabilityPLRole" />
                          
+        <bpel:partnerLink name="OrderServicePL" 
+                          partnerLinkType="tns:OrderServicePLT" 
+                          partnerRole="OrderServicePLRole"/>
     </bpel:partnerLinks>
   
     <!-- ================================================================= -->         
@@ -51,6 +54,8 @@
                        messageType="ns:checkAvailabilityOutput"/>
         <bpel:variable name="CheckAvailabilityPLRequest" 
                        messageType="ns:checkAvailabilityInput"/>
+        <bpel:variable name="OrderServicePLStoreOrderResponse" messageType="ns:storeOrderDetailsOutput"></bpel:variable>
+        <bpel:variable name="OrderServicePLStoreOrderRequest" messageType="ns:storeOrderDetailsInput"></bpel:variable>
     </bpel:variables>
 
     <!-- ================================================================= -->         
@@ -70,7 +75,7 @@
                  createInstance="yes"/>
 
         <!-- TODO: try parallel -->
-        <bpel:forEach parallel="no" counterName="index" name="ForEachProduct">
+        <bpel:forEach parallel="yes" counterName="index" name="ForEachProduct">
             <bpel:startCounterValue>
                 <![CDATA[1]]>
             </bpel:startCounterValue>
@@ -152,6 +157,66 @@
         </bpel:forEach>
         
         <!-- Generate reply to synchronous request -->
+        <bpel:assign validate="no" name="AssignStoreOrder">
+            <bpel:copy>
+                <bpel:from><bpel:literal><tns:storeOrderDetails xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tns:customerId>tns:customerId</tns:customerId>
+  <tns:products>
+    <tns:product>
+      <tns:productId>tns:productId</tns:productId>
+      <tns:numberOfItems>0</tns:numberOfItems>
+    </tns:product>
+  </tns:products>
+  <tns:shippingAddress>tns:shippingAddress</tns:shippingAddress>
+  <tns:paymentDetails>
+    <tns:bankName>tns:bankName</tns:bankName>
+    <tns:bankAddress>tns:bankAddress</tns:bankAddress>
+    <tns:accountNumber>tns:accountNumber</tns:accountNumber>
+    <tns:accountHolderName>tns:accountHolderName</tns:accountHolderName>
+  </tns:paymentDetails>
+</tns:storeOrderDetails>
+</bpel:literal></bpel:from>
+                <bpel:to variable="OrderServicePLStoreOrderRequest" part="storeOrderDetailsInput"></bpel:to>
+            </bpel:copy>
+            <bpel:copy>
+                <bpel:from part="payload" variable="input">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:input/tns:customerId]]></bpel:query>
+                </bpel:from>
+                <bpel:to part="storeOrderDetailsInput" variable="OrderServicePLStoreOrderRequest">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[ns:customerId]]></bpel:query>
+                </bpel:to>
+            </bpel:copy>
+            <bpel:copy>
+                <bpel:from part="payload" variable="input">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:input/tns:products]]></bpel:query>
+                </bpel:from>
+                <bpel:to part="storeOrderDetailsInput" variable="OrderServicePLStoreOrderRequest">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[ns:products]]></bpel:query>
+                </bpel:to>
+            </bpel:copy>
+            <bpel:copy>
+                <bpel:from part="payload" variable="input">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:input/tns:shippingAddress]]></bpel:query>
+                </bpel:from>
+                <bpel:to part="storeOrderDetailsInput" variable="OrderServicePLStoreOrderRequest">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[ns:shippingAddress]]></bpel:query>
+                </bpel:to>
+            </bpel:copy>
+            <bpel:copy>
+                <bpel:from part="payload" variable="input">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:input/tns:paymentDetails]]></bpel:query>
+                </bpel:from>
+                <bpel:to part="storeOrderDetailsInput" variable="OrderServicePLStoreOrderRequest">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[ns:paymentDetails]]></bpel:query>
+                </bpel:to>
+            </bpel:copy>
+        </bpel:assign>
+        <bpel:invoke name="InvokeStoreOrder" 
+                     partnerLink="OrderServicePL" 
+                     operation="storeOrderDetails" 
+                     portType="ns:OrderPortType" 
+                     inputVariable="OrderServicePLStoreOrderRequest" 
+                     outputVariable="OrderServicePLStoreOrderResponse"/>
         <bpel:assign validate="no" name="ProductsAvailable">
             <bpel:copy>
                 <bpel:from>
@@ -162,6 +227,14 @@
 	                </bpel:literal>
                 </bpel:from>
                 <bpel:to part="payload" variable="output"/>
+            </bpel:copy>
+            <bpel:copy>
+                <bpel:from part="storeOrderDetailsOutput" variable="OrderServicePLStoreOrderResponse">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[ns:orderId]]></bpel:query>
+                </bpel:from>
+                <bpel:to part="payload" variable="output">
+                    <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:result]]></bpel:query>
+                </bpel:to>
             </bpel:copy>
         </bpel:assign>
        
