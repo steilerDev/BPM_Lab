@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://group-one" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="ConductOrder" targetNamespace="http://group-one">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" 
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+             xmlns:tns="http://group-one" 
+             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" 
+             xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" 
+             name="ConductOrder" 
+             targetNamespace="http://group-one">
+             
+<import location="bpm-lab.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TYPE DEFINITION - List of types participating in this BPEL process 
@@ -7,17 +16,22 @@
      but you can define or import any XML Schema type and use them as part 
      of the message types.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
-    <plnk:partnerLinkType name="CheckAvailabilityPLT">
-    <plnk:role name="CheckAvailabilityPLRole" portType="wsdl:InventoryPortType"/>
-  </plnk:partnerLinkType>
-    <import location="bpm-lab.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
     <types>
-        <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://group-one">
+        <schema xmlns="http://www.w3.org/2001/XMLSchema"
+                attributeFormDefault="unqualified" 
+                elementFormDefault="qualified" 
+                targetNamespace="http://group-one">
 
             <complexType name="product">
                 <sequence>
                     <element name="productId" type="string"></element>
                     <element name="quantity" type="int"></element>
+                </sequence>
+            </complexType>
+            
+            <complexType name="products">
+                <sequence>
+                    <element name="product" maxOccurs="unbounded" minOccurs="1" type="tns:product"/>
                 </sequence>
             </complexType>
             
@@ -30,6 +44,16 @@
                     </sequence>
             </complexType>
 
+            <complexType name="order">
+                <sequence>
+	                <element name="customerId" type="string"/>
+			        <element name="products" type="tns:products"/>
+			        <element name="shippingAddress" type="string"/>
+			        <element name="paymentDetails" type="tns:paymentDetails"/>
+			        <element name="shipmentDate" type="date"/>
+		        </sequence>
+		    </complexType>
+		      
             <element name="ConductOrderRequest">
                 <complexType>
                     <sequence>
@@ -45,25 +69,7 @@
                     </sequence>
                 </complexType>
             </element>
-        
-            <complexType name="order">
-                <sequence>
-	                <element name="customerId" type="string"/>
-			        <element name="products">
-	                    <complexType>
-			                <sequence>
-			                    <element name="product" maxOccurs="unbounded" minOccurs="1" type="tns:product"/>
-			                </sequence>
-			            </complexType>
-			        </element>
-			        <element name="shippingAddress" type="string"/>
-			        <element name="paymentDetails" type="tns:paymentDetails"/>
-			        <element name="shipmentDate" type="date"/>
-		        </sequence>
-		    </complexType>
-		      
-        
-		    
+		   
         </schema>
     </types>
 
@@ -95,7 +101,13 @@
      PARTNER LINK TYPE DEFINITION
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
     <plnk:partnerLinkType name="ConductOrder">
-        <plnk:role name="ConductOrderProvider" portType="tns:ConductOrder"/>
+        <plnk:role name="ConductOrderProvider" 
+                   portType="tns:ConductOrder"/>
+    </plnk:partnerLinkType>
+    
+    <plnk:partnerLinkType name="CheckAvailabilityPLT">
+        <plnk:role name="CheckAvailabilityPLRole" 
+                   portType="wsdl:InventoryPortType"/>
     </plnk:partnerLinkType>
     
 

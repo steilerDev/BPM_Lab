@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://de.group-one" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="PlaygroundProcess" targetNamespace="http://de.group-one">
-
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" 
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+             xmlns:tns="http://de.group-one" 
+             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" 
+             xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" 
+             name="PlaygroundProcess" 
+             targetNamespace="http://de.group-one">
+             
+<import location="bpm-lab.wsdl" 
+        namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TYPE DEFINITION - List of types participating in this BPEL process 
      The BPEL Designer will generate default request and response types
      but you can define or import any XML Schema type and use them as part 
      of the message types.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
-    <plnk:partnerLinkType name="ProductListPLT">
-    <plnk:role name="InventoryPLRole" portType="wsdl:InventoryPortType"/>
-  </plnk:partnerLinkType>
-    <import location="bpm-lab.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
-    <types>
-        <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://de.group-one">
+<plnk:partnerLinkType name="ProductListPLT">
+    <plnk:role name="InventoryPLRole" 
+               portType="wsdl:InventoryPortType"/>
+</plnk:partnerLinkType>
+    
+<types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" 
+            attributeFormDefault="unqualified" 
+            elementFormDefault="qualified" 
+            targetNamespace="http://de.group-one">
 
-            <element name="PlaygroundProcessRequest">
-                <complexType>
-                    <sequence>
-                        <element name="input" type="int"/>
-                    </sequence>
-                </complexType>
-            </element>
+        <element name="PlaygroundProcessRequest">
+            <complexType>
+                <sequence>
+                    <element name="input" type="int"/>
+                </sequence>
+            </complexType>
+        </element>
 
-            <element name="PlaygroundProcessResponse">
-                <complexType>
-                    <sequence>
-                        <element name="result" type="string"/>
-                    </sequence>
-                </complexType>
-            </element>
-        </schema>
-    </types>
+        <element name="PlaygroundProcessResponse">
+            <complexType>
+                <sequence>
+                    <element name="result" type="string"/>
+                </sequence>
+            </complexType>
+        </element>
+    </schema>
+</types>
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

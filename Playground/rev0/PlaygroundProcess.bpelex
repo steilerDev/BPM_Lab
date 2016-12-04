@@ -22,7 +22,7 @@
   </extensions>
   <extensions>
     <extendedObject href="PlaygroundProcess.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1480800338204" processName="{http://de.group-one}PlaygroundProcess" processVersion="3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1480800338204" processName="{http://de.group-one}PlaygroundProcess" processVersion="1"/>
   </extensions>
   <extensions>
     <extendedObject href="PlaygroundProcess.bpel#//@activity/@activities.2"/>
