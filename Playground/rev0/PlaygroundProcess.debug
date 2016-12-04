@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpdb:Debug xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpdb="http://simtech.de/bpel/debug" processName="PlaygroundProcess" processPath="C:\Users\steiler\Documents\Repository\BPM_Lab\Playground\rev0\PlaygroundProcess.bpel">
+  <globalBreakpoints>
+    <breakpoint name="" targetXPath="/process" targetName="PlaygroundProcess"/>
+  </globalBreakpoints>
+  <localBreakpoints>
+    <breakpoint name="" targetXPath="/process/sequence[1]/receive[1]" targetName="receiveInput"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/reply[1]" targetName="replyOutput"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/assign[2]" targetName="Assign"/>
+  </localBreakpoints>
+</bpdb:Debug>

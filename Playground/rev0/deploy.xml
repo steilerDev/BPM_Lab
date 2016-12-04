@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:FlowSOG="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:pns="http://de.group-one">
+  <process name="pns:PlaygroundProcess">
+    <metaData>
+      <mdProperty name="version" value="1"/>
+    </metaData>
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="pns:PlaygroundProcessService" port="PlaygroundProcessPort"/>
+    </provide>
+    <invoke partnerLink="ProductListPL">
+      <service name="FlowSOG:InventoryService" port="InventoryPort"/>
+    </invoke>
+  </process>
+</deploy>
