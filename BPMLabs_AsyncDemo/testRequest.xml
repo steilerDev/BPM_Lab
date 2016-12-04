@@ -1,0 +1,26 @@
+<tns:BPMLabsProcessRequest xmlns:tns="http://de.ustutt.simtech" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tns:portOfODE>32770</tns:portOfODE>
+  <tns:customerID>4416290</tns:customerID>
+  <tns:products>
+    <tns:product>
+      <tns:productID>44162d90-9315-4acc-980e-cf975c6b9397</tns:productID>
+      <tns:amount>2</tns:amount>
+    </tns:product>
+    <tns:product>
+      <tns:productID>1d1d5dcf-de65-44d7-bda3-7a25ee222bde</tns:productID>
+      <tns:amount>2</tns:amount>
+    </tns:product>
+    <tns:product>
+      <tns:productID>08de18f0-1965-4a37-a940-7237deb0235f</tns:productID>
+      <tns:amount>1</tns:amount>
+    </tns:product>
+  </tns:products>
+  <tns:shippingAddress>Pfaffenwaldring 5b, 70569 Stuttgart</tns:shippingAddress>
+  <tns:shippmentDate>2015-09-25</tns:shippmentDate>
+  <tns:paymentDetails>
+    <tns:bankName>SomeBank AG</tns:bankName>
+    <tns:bankAddress>Main Street 123</tns:bankAddress>
+    <tns:accountNumber>0123456767213</tns:accountNumber>
+    <tns:accountHolderName>Mr. Smith</tns:accountHolderName>
+  </tns:paymentDetails>
+</tns:BPMLabsProcessRequest>
