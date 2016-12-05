@@ -100,6 +100,14 @@
     <plnk:partnerLinkType name="OrderServicePLT">
         <plnk:role name="OrderServicePLRole" portType="wsdl:OrderPortType"/>
     </plnk:partnerLinkType>
+    
+    <plnk:partnerLinkType name="ShipmentServicePLT">
+        <plnk:role name="ShipmentServicePLRole" portType="wsdl:ShipmentPortType"/>
+    </plnk:partnerLinkType>
+    
+    <plnk:partnerLinkType name="PaymentServicePLT">
+        <plnk:role name="PaymentServicePLRole" portType="wsdl:PaymentPortType"/>
+    </plnk:partnerLinkType>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      BINDING DEFINITION - Defines the message format and protocol details
      for a web service.

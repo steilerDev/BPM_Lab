@@ -1,22 +1,22 @@
 <tns:ConductOrderRequest xmlns:tns="http://group-one" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <tns:input>
-    <tns:customerId>1</tns:customerId>
+    <tns:customerId>tns:customerId</tns:customerId>
     <tns:products>
       <tns:product>
         <tns:productId>44162d90-9315-4acc-980e-cf975c6b9397</tns:productId>
-        <tns:quantity>1</tns:numberOfItems>
+        <tns:numberOfItems>1</tns:numberOfItems>
       </tns:product>
-	  <tns:product>
+      <tns:product>
         <tns:productId>66968a93-4ec6-4fa2-bf2d-3b0f59e56738</tns:productId>
-        <tns:quantity>1</tns:numberOfItems>
+        <tns:numberOfItems>1</tns:numberOfItems>
       </tns:product>
     </tns:products>
-    <tns:shippingAddress>Test Address</tns:shippingAddress>
+    <tns:shippingAddress>tns:shippingAddress</tns:shippingAddress>
     <tns:paymentDetails>
-      <tns:bankName>TestBank</tns:bankName>
-      <tns:bankAddress>TestBankAddress</tns:bankAddress>
-      <tns:accountNumber>12345</tns:accountNumber>
-      <tns:accountHolderName>John Doe</tns:accountHolderName>
+      <tns:bankName>tns:bankName</tns:bankName>
+      <tns:bankAddress>tns:bankAddress</tns:bankAddress>
+      <tns:accountNumber>tns:accountNumber</tns:accountNumber>
+      <tns:accountHolderName>tns:accountHolderName</tns:accountHolderName>
     </tns:paymentDetails>
     <tns:shipmentDate>2001-01-01</tns:shipmentDate>
   </tns:input>

@@ -16,5 +16,11 @@
     <invoke partnerLink="OrderServicePL">
       <service name="FlowSOG:OrderService" port="OrderPort"/>
     </invoke>
+    <invoke partnerLink="ShipmentServicePL">
+      <service name="FlowSOG:ShipmentService" port="ShipmentPort"/>
+    </invoke>
+    <invoke partnerLink="PaymentServicePL">
+      <service name="FlowSOG:PaymentService" port="PaymentPort"/>
+    </invoke>
   </process>
 </deploy>
