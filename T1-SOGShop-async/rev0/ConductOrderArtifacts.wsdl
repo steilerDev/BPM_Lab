@@ -111,6 +111,10 @@
     <plnk:partnerLinkType name="PaymentServicePLT">
         <plnk:role name="PaymentServicePLRole" portType="wsdl:PaymentPortType"/>
     </plnk:partnerLinkType>
+    
+    <plnk:partnerLinkType name="InventoryCallbackPLT">
+        <plnk:role name="InventoryCallbackPLRole" portType="wsdl:InventoryCallbackPortType"/>
+    </plnk:partnerLinkType>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      BINDING DEFINITION - Defines the message format and protocol details
      for a web service.

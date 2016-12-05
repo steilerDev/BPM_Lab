@@ -41,6 +41,10 @@
         <bpel:partnerLink name="PaymentServicePL" 
                           partnerLinkType="tns:PaymentServicePLT" 
                           partnerRole="PaymentServicePLRole"/>
+                          
+        <bpel:partnerLink name="InventoryCallbackPL" 
+                          partnerLinkType="tns:InventoryCallbackPLT" 
+                          myRole="InventoryCallbackPLRole"/>
     </bpel:partnerLinks>
   
     <!-- ================================================================= -->         

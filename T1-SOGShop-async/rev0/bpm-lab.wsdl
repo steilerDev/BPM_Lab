@@ -579,7 +579,7 @@
   <!-- This service endpoint has to be provided by the invoker, e.g., the BPEL workflow invoking the InventoryService -->
   <service name="InventoryCallbackService">
     <port name="InventoryCallbackPort" binding="tns:InventoryCallbackSoapBinding">
-      <SOAP:address location="http://localhost:8080"/>
+      <SOAP:address location="http://localhost:8080/ode/processes/InventoryCallbackPort"/>
     </port>
   </service>
 
