@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="xmlns:" key="selection"/>
+		<item value="CheckAvailability" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="CheckAvailability"/>
+			<item value="checkAvailability"/>
 			<item value="xmlns:"/>
 			<item value="namespace"/>
 			<item value="ShipmentServicePLRequest"/>
 			<item value="fault"/>
 			<item value="OrderPortType"/>
 			<item value="ShipmentPort"/>
-			<item value="InventoryService"/>
-			<item value="flow"/>
 		</list>
 		<list key="replacehistory">
+			<item value="InventoryService"/>
 			<item value="ns"/>
 		</list>
 	</section>

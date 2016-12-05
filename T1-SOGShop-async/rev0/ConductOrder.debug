@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpdb:Debug xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpdb="http://simtech.de/bpel/debug" processName="ConductOrder" processPath="C:\Users\steiler\Documents\Repository\BPM_Lab\T1-SOGShop-sync\rev0\ConductOrder.bpel">
+  <globalBreakpoints/>
+  <localBreakpoints>
+    <breakpoint name="" targetXPath="/process/sequence[1]/forEach[1]/scope[1]" targetName="CheckAvailabilityScope"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/scope[1]/sequence[1]/flow[1]" targetName="Flow"/>
+  </localBreakpoints>
+</bpdb:Debug>
