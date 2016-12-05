@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="PaymentServicePLRole" key="selection"/>
+		<item value="InventoryServicePLCheckAvailabilityRequest" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="InventoryServicePLCheckAvailabilityRequest"/>
+			<item value="checkAvailabilityOutput"/>
 			<item value="PaymentServicePLRole"/>
 			<item value="InventroyCallbackPL"/>
 			<item value="InventoryCallbackPL"/>
 			<item value="InventoryCallBackPL"/>
 			<item value="CheckAvailability"/>
 			<item value="checkAvailability"/>
-			<item value="xmlns:"/>
-			<item value="namespace"/>
 		</list>
 		<list key="replacehistory">
 			<item value="InventoryService"/>

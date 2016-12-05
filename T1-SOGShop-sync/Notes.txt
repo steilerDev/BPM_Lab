@@ -1,0 +1,2 @@
+* ForEachProduct is executed in parallel -> Maximize throughput of slow backend
+* Cost Calculation is also done in parallel (using a flow). The OrderID is assigned beforehand

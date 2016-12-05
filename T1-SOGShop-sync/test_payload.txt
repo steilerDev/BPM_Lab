@@ -7,6 +7,10 @@
         <tns:numberOfItems>1</tns:numberOfItems>
       </tns:product>
       <tns:product>
+        <tns:productId>44162d90-9315-4acc-980e-cf975c6b9397</tns:productId>
+        <tns:numberOfItems>1</tns:numberOfItems>
+      </tns:product>
+      <tns:product>
         <tns:productId>66968a93-4ec6-4fa2-bf2d-3b0f59e56738</tns:productId>
         <tns:numberOfItems>1</tns:numberOfItems>
       </tns:product>

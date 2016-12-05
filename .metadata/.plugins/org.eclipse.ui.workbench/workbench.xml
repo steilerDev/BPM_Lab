@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="40" version="2.0">
+<workbench progressCount="38" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="15" y="9">
 <fastViewData fastViewLocation="1024"/>
@@ -26,7 +26,7 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.bpel.apache.ode.deploy.ui.editors.ODEDeployMultiPageEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" itemType="typeToolBarContribution" x="104" y="22"/>
 <coolItem id="org.eclipse.bpel.ui.bpeleditor" itemType="typeToolBarContribution" x="293" y="22"/>
@@ -42,23 +42,16 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder84.bpel" partName="ConductOrder84.bpel" path="C:/Users/steiler/Documents/Repository/Tiemo_BPM/rev0/ConductOrder84.bpel" title="ConductOrder84.bpel" tooltip="ConductOrder84/rev0/ConductOrder84.bpel" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ConductOrder84/rev0/ConductOrder84.bpel"/>
-</editor>
-<editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrder84Artifacts.wsdl" partName="ConductOrder84Artifacts.wsdl" path="C:/Users/steiler/Documents/Repository/Tiemo_BPM/rev0/ConductOrder84Artifacts.wsdl" title="ConductOrder84Artifacts.wsdl" tooltip="ConductOrder84/rev0/ConductOrder84Artifacts.wsdl" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ConductOrder84/rev0/ConductOrder84Artifacts.wsdl"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" partName="ConductOrder.bpel" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-async/rev0/ConductOrder.bpel" title="ConductOrder.bpel" tooltip="T1-SOGShop-async/rev0/ConductOrder.bpel" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
 </editor>
-<editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" partName="ConductOrderArtifacts.wsdl" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl" title="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl"/>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="deploy.xml" partName="deploy.xml" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-async/rev0/deploy.xml" title="deploy.xml" tooltip="T1-SOGShop-async/rev0/deploy.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-async/rev0/deploy.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="bpm-lab.wsdl" partName="bpm-lab.wsdl" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-async/rev0/bpm-lab.wsdl" title="bpm-lab.wsdl" tooltip="T1-SOGShop-async/rev0/bpm-lab.wsdl" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-async/rev0/bpm-lab.wsdl"/>
@@ -249,7 +242,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.13567312" ratioLeft="259" ratioRight="1650" relationship="2" relative="bpel.left"/>
-<info folder="true" part="bpel.bottom" ratio="0.9371782" ratioLeft="910" ratioRight="61" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bpel.bottom" ratio="0.46755922" ratioLeft="454" ratioRight="517" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.bpel.ui.simtech.auditingView" label="SimTech Auditing"/>
@@ -277,127 +270,69 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/T1-SOGShop-async/rev0/deploy.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/ConductOrder84/rev0/ConductOrder84.bpel"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" path="/T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/T1-SOGShop-async/rev0/deploy.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" path="/T1-SOGShop-async/rev0/bpm-lab.wsdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/T1-SOGShop-async/rev0/bpm-lab.wsdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" path="/T1-SOGShop-async/rev0/bpm-lab.wsdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.contenttype" path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
 </editors>
-<item historyLabel="ConductOrder84.bpel" index="1"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3">
-<position info="not_deleted" x="5579" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="0">
+<position info="not_deleted" x="5980" y="0"/>
 </item>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="4">
-<position info="not_deleted" x="6564" y="0"/>
+<item historyLabel="deploy.xml" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="bpm-lab.wsdl" index="5">
-<position info="not_deleted" x="21254" y="0"/>
-</item>
-<item historyLabel="bpm-lab.wsdl" index="6">
-<position info="not_deleted" x="40" y="0"/>
-</item>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="bpm-lab.wsdl" index="5">
-<position info="not_deleted" x="40" y="0"/>
-</item>
-<item historyLabel="bpm-lab.wsdl" index="6">
+<item historyLabel="bpm-lab.wsdl" index="2">
 <position info="not_deleted" x="21617" y="0"/>
 </item>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3">
-<position info="not_deleted" x="6564" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="0">
+<position info="not_deleted" x="5980" y="0"/>
 </item>
-<item historyLabel="bpm-lab.wsdl" index="5"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3">
-<position info="not_deleted" x="6564" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="4">
-<position info="not_deleted" x="56" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="11069" y="0"/>
 </item>
-<item historyLabel="Inline Schema of bpm-lab.wsdl" index="7">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="bpm-lab.wsdl" index="5"/>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="deploy.xml" index="0">
-<position info="not_deleted" x="566" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="4"/>
+<item historyLabel="ConductOrder.bpel" index="0">
+<position info="not_deleted" x="28872" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="bpm-lab.wsdl" index="5">
-<position info="not_deleted" x="21617" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="10906" y="0"/>
 </item>
-<item historyLabel="bpm-lab.wsdl" index="6">
-<position info="not_deleted" x="21254" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="26300" y="0"/>
 </item>
-<item historyLabel="bpm-lab.wsdl" index="6">
-<position info="not_deleted" x="21617" y="0"/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="ConductOrder84.bpel" index="1"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="ConductOrder.bpel" index="2"/>
-<item historyLabel="ConductOrder84.bpel" index="1"/>
-<item historyLabel="ConductOrderArtifacts.wsdl" index="3"/>
-<item historyLabel="ConductOrder.bpel" index="2">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20471" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="10906" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="22248" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20019" y="0"/>
 </item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item historyLabel="ConductOrder.bpel" index="8">
-<position/>
-</item>
-<item active="true" historyLabel="ConductOrder.bpel" index="8">
-<position/>
+<item active="true" historyLabel="ConductOrder.bpel" index="3">
+<position info="not_deleted" x="20921" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -412,18 +347,34 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bpel.bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="Inline Schema of bpm-lab.wsdl" tooltip="Target Namespace: http://iaas.uni-stuttgart.de/labs/FlowSOG">
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-sync/rev0/ConductOrder.bpel">
+<persistable path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="bpm-lab.wsdl" tooltip="T1-SOGShop-async/rev0/bpm-lab.wsdl">
 <persistable path="/T1-SOGShop-async/rev0/bpm-lab.wsdl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="deploy.xml" tooltip="T1-SOGShop-async/rev0/deploy.xml">
+<persistable path="/T1-SOGShop-async/rev0/deploy.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-async/rev0/ConductOrder.bpel">
+<persistable path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl">
 <persistable path="/T1-SOGShop-async/rev0/ConductOrderArtifacts.wsdl"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-async/rev0/ConductOrder.bpel">
-<persistable path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl">
+<persistable path="/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="bpm-lab.wsdl" tooltip="T1-SOGShop-sync/rev0/bpm-lab.wsdl">
+<persistable path="/T1-SOGShop-sync/rev0/bpm-lab.wsdl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="Inline Schema of bpm-lab.wsdl" tooltip="Target Namespace: http://iaas.uni-stuttgart.de/labs/FlowSOG">
+<persistable path="/T1-SOGShop-async/rev0/bpm-lab.wsdl"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrder84Artifacts.wsdl" tooltip="ConductOrder84/rev0/ConductOrder84Artifacts.wsdl">
 <persistable path="/ConductOrder84/rev0/ConductOrder84Artifacts.wsdl"/>
@@ -431,23 +382,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder84.bpel" tooltip="ConductOrder84/rev0/ConductOrder84.bpel">
 <persistable path="/ConductOrder84/rev0/ConductOrder84.bpel"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="deploy.xml" tooltip="T1-SOGShop-async/rev0/deploy.xml">
-<persistable path="/T1-SOGShop-async/rev0/deploy.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-sync/rev0/ConductOrder.bpel">
-<persistable path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="deploy.xml" tooltip="ConductOrder84/rev0/deploy.xml">
 <persistable path="/ConductOrder84/rev0/deploy.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrderSync.bpel" tooltip="T6-FlowSOGShop-sync/rev0/ConductOrderSync.bpel">
 <persistable path="/T6-FlowSOGShop-sync/rev0/ConductOrderSync.bpel"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl">
-<persistable path="/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="bpm-lab.wsdl" tooltip="T1-SOGShop-sync/rev0/bpm-lab.wsdl">
-<persistable path="/T1-SOGShop-sync/rev0/bpm-lab.wsdl"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="HelloWorld.bpel" tooltip="HelloWorld/rev0/HelloWorld.bpel">
 <persistable path="/HelloWorld/rev0/HelloWorld.bpel"/>
@@ -457,9 +396,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.apache.ode.deploy.ui.editors.ODEDeployMultiPageEditor" name="deploy.xml" tooltip="T1-SOGShop-sync/rev0/deploy.xml">
 <persistable path="/T1-SOGShop-sync/rev0/deploy.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderAsyncArtifacts.wsdl" tooltip="T6-FlowSOGShop-async/rev0/ConductOrderAsyncArtifacts.wsdl">
-<persistable path="/T6-FlowSOGShop-async/rev0/ConductOrderAsyncArtifacts.wsdl"/>
 </file>
 </mruList>
 </workbench>

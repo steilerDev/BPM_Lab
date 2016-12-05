@@ -49,6 +49,7 @@
                 <complexType>
                     <sequence>
                         <element name="input" type="tns:order"/>
+                        <element name="callbackURL" type="string"/>
                     </sequence>
                 </complexType>
             </element>
