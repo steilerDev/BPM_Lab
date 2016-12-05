@@ -444,7 +444,7 @@
                              
                 <bpel:if name="IfPaymentUnsuccesful">
                     <bpel:condition>
-                        <![CDATA[$PaymentServicePLConductPaymentResponse.conductPaymentOutput/ns:order/ns:status != "payed"]]>
+                        <![CDATA[$PaymentServicePLConductPaymentResponse.conductPaymentOutput/ns:status != "payed"]]>
                     </bpel:condition>
                     <bpel:throw name="ThrowPaymentUnsuccesfulFault" 
                                 faultName="tns:PaymentUnsuccesfulFault"/>
