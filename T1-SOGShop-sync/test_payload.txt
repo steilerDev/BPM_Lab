@@ -3,7 +3,7 @@
     <tns:customerId>tns:customerId</tns:customerId>
     <tns:products>
       <tns:product>
-        <tns:productId>44162d90-9315-4acc-980e-cf975c6b9397</tns:productId>
+        <tns:productId>1d1d5dcf-de65-44d7-bda3-7a25ee222bde</tns:productId>
         <tns:numberOfItems>1</tns:numberOfItems>
       </tns:product>
       <tns:product>

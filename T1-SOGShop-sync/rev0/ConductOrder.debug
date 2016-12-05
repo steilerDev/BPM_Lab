@@ -3,5 +3,6 @@
   <globalBreakpoints/>
   <localBreakpoints>
     <breakpoint name="" targetXPath="/process/sequence[1]/forEach[1]/scope[1]" targetName="CheckAvailabilityScope"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/scope[1]/sequence[1]/flow[1]" targetName="Flow"/>
   </localBreakpoints>
 </bpdb:Debug>
