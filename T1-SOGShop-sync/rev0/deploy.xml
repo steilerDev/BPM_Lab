@@ -10,7 +10,10 @@
     <provide partnerLink="client">
       <service name="pns:ConductOrderService" port="ConductOrderPort"/>
     </provide>
-    <invoke partnerLink="CheckAvailabilityPL">
+    <!--provide partnerLink="InventoryCallBackPL">
+      <service name="FlowSOG:InventoryCallbackService" port="InventoryCallbackPort"/>
+    </provide-->
+    <invoke partnerLink="InventoryServicePL">
       <service name="FlowSOG:InventoryService" port="InventoryPort"/>
     </invoke>
     <invoke partnerLink="OrderServicePL">

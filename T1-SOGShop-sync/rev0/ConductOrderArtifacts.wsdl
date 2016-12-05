@@ -96,8 +96,8 @@
         <plnk:role name="ConductOrderProvider" portType="tns:ConductOrder"/>
     </plnk:partnerLinkType>
     
-    <plnk:partnerLinkType name="CheckAvailabilityPLT">
-        <plnk:role name="CheckAvailabilityPLRole" portType="wsdl:InventoryPortType"/>
+    <plnk:partnerLinkType name="InventoryServicePLT">
+        <plnk:role name="InventoryServicePLRole" portType="wsdl:InventoryPortType"/>
     </plnk:partnerLinkType>
     
     <plnk:partnerLinkType name="OrderServicePLT">

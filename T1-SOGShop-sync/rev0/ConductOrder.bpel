@@ -26,9 +26,9 @@
                           partnerLinkType="tns:ConductOrder"
                           myRole="ConductOrderProvider" />
                           
-        <bpel:partnerLink name="CheckAvailabilityPL" 
-                          partnerLinkType="tns:CheckAvailabilityPLT" 
-                          partnerRole="CheckAvailabilityPLRole" />
+        <bpel:partnerLink name="InventoryServicePL" 
+                          partnerLinkType="tns:InventoryServicePLT" 
+                          partnerRole="InventoryServicePLRole" />
                          
         <bpel:partnerLink name="OrderServicePL" 
                           partnerLinkType="tns:OrderServicePLT" 
@@ -58,9 +58,9 @@
         <bpel:variable name="output"
                        messageType="tns:ConductOrderResponseMessage"/>
                        
-        <bpel:variable name="CheckAvailabilityPLResponse" 
+        <bpel:variable name="InventoryServicePLCheckAvailabilityResponse" 
                        messageType="ns:checkAvailabilityOutput"/>
-        <bpel:variable name="CheckAvailabilityPLRequest" 
+        <bpel:variable name="InventoryServicePLCheckAvailabilityRequest" 
                        messageType="ns:checkAvailabilityInput"/>
                        
         <bpel:variable name="OrderServicePLStoreOrderResponse" 
@@ -134,7 +134,7 @@
                                   </FlowSOG:checkAvailability>
                               </bpel:literal>
                           </bpel:from>
-                          <bpel:to part="checkAvailabilityInput" variable="CheckAvailabilityPLRequest" />
+                          <bpel:to part="checkAvailabilityInput" variable="InventoryServicePLCheckAvailabilityRequest" />
                       </bpel:copy>
                       <bpel:copy>
                           <bpel:from part="payload" variable="input">
@@ -142,7 +142,7 @@
                                   <![CDATA[tns:input/tns:products/tns:product[round($index)]/tns:productId]]>
                               </bpel:query>
                           </bpel:from>
-                          <bpel:to part="checkAvailabilityInput" variable="CheckAvailabilityPLRequest">
+                          <bpel:to part="checkAvailabilityInput" variable="InventoryServicePLCheckAvailabilityRequest">
                               <bpel:query>
                                   <![CDATA[ns:productId]]>
                               </bpel:query>
@@ -151,15 +151,15 @@
                   </bpel:assign>
                   
                         <bpel:invoke name="InvokeCheckAvailability" 
-                                     partnerLink="CheckAvailabilityPL" 
+                                     partnerLink="InventoryServicePL" 
                                      operation="checkAvailability" 
                                      portType="ns:InventoryPortType" 
-                                     inputVariable="CheckAvailabilityPLRequest" 
-                                     outputVariable="CheckAvailabilityPLResponse" />
+                                     inputVariable="InventoryServicePLCheckAvailabilityRequest" 
+                                     outputVariable="InventoryServicePLCheckAvailabilityResponse" />
                                      
                         <bpel:if name="IfProductNotAvailable">
                             <bpel:condition>
-                                <![CDATA[$CheckAvailabilityPLResponse.checkAvailabilityOutput/ns:product/ns:status/ns:currentAvailability = "not available"]]>
+                                <![CDATA[$InventoryServicePLCheckAvailabilityResponse.checkAvailabilityOutput/ns:product/ns:status/ns:currentAvailability = "not available"]]>
                             </bpel:condition>
                             <bpel:throw name="ThrowProductNotAvailableFault" faultName="tns:ProductNotAvailableFault"/>
                         </bpel:if>
