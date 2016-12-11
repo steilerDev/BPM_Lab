@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://group-one" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="ConductOrder" targetNamespace="http://group-one">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" 
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+             xmlns:tns="http://group-one" 
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" 
+             xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" 
+             xmlns:ns="http://iaas.uni-stuttgart.de/labs/FlowSOG" 
+             name="ConductOrder" 
+             targetNamespace="http://group-one">
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TYPE DEFINITION - List of types participating in this BPEL process 
@@ -8,6 +17,20 @@
      of the message types.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
     <import location="bpm-lab.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
+    
+    <vprop:property name="CustomerId" type="xsd:string"/>
+    
+    <vprop:propertyAlias messageType="wsdl:checkAvailabilityAsyncInput" 
+                         part="checkAvailabilityAsyncInput" 
+                         propertyName="tns:CustomerId">
+	    <vprop:query><![CDATA[ns:customerId]]></vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias messageType="wsdl:onFinishCheckAvailabilityInput"
+                         part="onFinishCheckAvailabilityInput" 
+                         propertyName="tns:CustomerId">
+        <vprop:query><![CDATA[ns:customerId]]></vprop:query>
+    </vprop:propertyAlias>
+    
     <types>
         <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://group-one">
 
