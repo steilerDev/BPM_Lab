@@ -550,14 +550,14 @@
          <flow:productId>?</flow:productId>\r
       </flow:checkAvailabilityAsync>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iaas.uni-stuttgart.de/labs/FlowSOG/Inventory/checkAvailabilityAsync"/></con:call></con:operation><con:operation id="b3a95d04-6172-470f-984a-e3e06a6f4589" isOneWay="false" action="http://iaas.uni-stuttgart.de/labs/FlowSOG/Inventory/listProducts" name="listProducts" bindingOperationName="listProducts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56ccfb79-c087-47ad-9e72-5b989121b9ee" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://uni.steilergroup.net:3000/InventoryService/InventoryPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:flow="http://iaas.uni-stuttgart.de/labs/FlowSOG">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iaas.uni-stuttgart.de/labs/FlowSOG/Inventory/checkAvailabilityAsync"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b3a95d04-6172-470f-984a-e3e06a6f4589" isOneWay="false" action="http://iaas.uni-stuttgart.de/labs/FlowSOG/Inventory/listProducts" name="listProducts" bindingOperationName="listProducts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56ccfb79-c087-47ad-9e72-5b989121b9ee" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://uni.steilergroup.net:3000/InventoryService/InventoryPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:flow="http://iaas.uni-stuttgart.de/labs/FlowSOG">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <flow:listProducts>\r
-         <flow:limit>?</flow:limit>\r
+         <flow:limit>10</flow:limit>\r
       </flow:listProducts>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iaas.uni-stuttgart.de/labs/FlowSOG/Inventory/listProducts"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d361f6f5-1cc1-4064-9506-5e2c3dc40f88" wsaVersion="NONE" name="OrderSoapBinding" type="wsdl" bindingName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}OrderSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/steiler/Documents/Repository/BPM_Lab/bpm-lab.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/steiler/Documents/Repository/BPM_Lab/bpm-lab.wsdl"><con:part><con:url>file:/C:/Users/steiler/Documents/Repository/BPM_Lab/bpm-lab.wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="FlowSOG" xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:FlowSOG="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iaas.uni-stuttgart.de/labs/FlowSOG/Inventory/listProducts"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d361f6f5-1cc1-4064-9506-5e2c3dc40f88" wsaVersion="NONE" name="OrderSoapBinding" type="wsdl" bindingName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}OrderSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/steiler/Documents/Repository/BPM_Lab/bpm-lab.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/steiler/Documents/Repository/BPM_Lab/bpm-lab.wsdl"><con:part><con:url>file:/C:/Users/steiler/Documents/Repository/BPM_Lab/bpm-lab.wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="FlowSOG" xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:FlowSOG="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <documentation>FlowSOG Shop services</documentation>
   <!--=====-->
   <!--Types-->
@@ -1089,13 +1089,11 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <flow:storeOrderDetails>\r
-         
-
   <tns:customerId xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG">tns:customerId</tns:customerId>
   <tns:products xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG">
       <product xmlns="http://group-one">
         <productId>44162d90-9315-4acc-980e-cf975c6b9397</productId>
-        <numberOfItems>1</numberOfItems>
+        <numberOfItems>0</numberOfItems>
       </product>
     </tns:products>
   <tns:shippingAddress xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG">tns:shippingAddress</tns:shippingAddress>
