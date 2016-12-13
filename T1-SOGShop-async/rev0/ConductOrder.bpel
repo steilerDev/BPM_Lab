@@ -273,10 +273,10 @@
                              operation="checkAvailabilityAsync" 
                              portType="ns:InventoryPortType" 
                              inputVariable="InventoryServicePLCheckAvailabilityRequest">
-                    <!-- >bpel:correlations>
-                        <bpel:correlation set="ceckAvailabilityCorrelationSet" 
+                    <bpel:correlations>
+                        <bpel:correlation set="checkAvailabilityCorrelationSet" 
                                           initiate="yes" />
-                    </bpel:correlations-->
+                    </bpel:correlations>
                 </bpel:invoke>
             </bpel:sequence>
         </bpel:scope>        
@@ -422,11 +422,11 @@
        
         <bpel:scope name="CheckAvailabilityScope"><bpel:sequence name="CheckAvailabilitySequence">
                 <bpel:receive name="OnCheckAvailabilityFinished" partnerLink="InventoryCallbackPL" operation="onFinishCheckAvailability" variable="InventoryServicePLCheckAvailabilityResponse">
-                    <!--bpel:correlations>
+                    <bpel:correlations>
                         <bpel:correlation set="checkAvailabilityCorrelationSet" initiate="no"/>
-                    </bpel:correlations-->
+                    </bpel:correlations>
                 </bpel:receive>
-                <bpel:if name="IfProductNotAvailable"><bpel:condition><![CDATA[count($InventoryServicePLCheckAvailabilityResponse.onFinishCheckAvailabilityInput/ns:productList/ns:product[ns:status/ns:currentAvailability != "available"]) = 0]]></bpel:condition>
+                <bpel:if name="IfProductNotAvailable"><bpel:condition><![CDATA[count($InventoryServicePLCheckAvailabilityResponse.onFinishCheckAvailabilityInput/ns:productList/ns:product[ns:status/ns:currentAvailability != "available"]) > 0]]></bpel:condition>
                     <bpel:throw name="ThrowProductNotAvailableFault" faultName="tns:ProductNotAvailableFault" />    
                 </bpel:if>
             </bpel:sequence>

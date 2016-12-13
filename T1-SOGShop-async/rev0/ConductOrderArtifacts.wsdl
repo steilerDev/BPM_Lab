@@ -19,7 +19,6 @@
     <import location="bpm-lab.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
     
     <vprop:property name="CustomerId" type="xsd:string"/>
-    
     <vprop:propertyAlias messageType="wsdl:checkAvailabilityAsyncInput" 
                          part="checkAvailabilityAsyncInput" 
                          propertyName="tns:CustomerId">
