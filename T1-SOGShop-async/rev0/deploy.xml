@@ -7,8 +7,8 @@
     <active>true</active>
     <retired>false</retired>
     <process-events generate="all"/>
-    <provide partnerLink="client">
-      <service name="pns:ConductOrderService" port="ConductOrderPort"/>
+    <provide partnerLink="ConductOrderAsyncPL">
+      <service name="pns:ConductOrderAsyncService" port="ConductOrderAsyncPort"/>
     </provide>
     <provide partnerLink="InventoryCallbackPL">
       <service name="FlowSOG:InventoryCallbackService" port="InventoryCallbackPort"/>

@@ -5,6 +5,7 @@
               suppressJoinFailure="yes"
               xmlns:tns="http://group-one"
               xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
               xmlns:ns="http://iaas.uni-stuttgart.de/labs/FlowSOG">
 
     <!-- Import the client WSDL -->

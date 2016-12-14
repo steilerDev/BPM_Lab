@@ -22,7 +22,7 @@
   </extensions>
   <extensions>
     <extendedObject href="BPMLabsProcess.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1448374915592" processName="{http://de.ustutt.simtech}BPMLabsProcess" processVersion="1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1448374915592" processName="{http://de.ustutt.simtech}BPMLabsProcess" processVersion="12"/>
   </extensions>
   <extensions>
     <extendedObject href="BPMLabsProcess.bpel#//@activity/@activities.3"/>

@@ -7,7 +7,7 @@
              xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" 
              xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" 
              xmlns:ns="http://iaas.uni-stuttgart.de/labs/FlowSOG" 
-             name="ConductOrder" 
+             name="ConductOrder-Async" 
              targetNamespace="http://group-one">
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +71,7 @@
                 <complexType>
                     <sequence>
                         <element name="input" type="tns:order"/>
-                        <element name="callbackURL" type="string"/>
+                        <element name="callbackPort" type="string"/>
                     </sequence>
                 </complexType>
             </element>
@@ -106,7 +106,7 @@
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
 
     <!-- portType implemented by the ConductOrder BPEL process -->
-    <portType name="ConductOrder">
+    <portType name="ConductOrderAsyncPortType">
         <operation name="process">
             <input message="tns:ConductOrderRequestMessage"/>
             <output message="tns:ConductOrderResponseMessage"/>
@@ -115,8 +115,8 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      PARTNER LINK TYPE DEFINITION
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
-    <plnk:partnerLinkType name="ConductOrder">
-        <plnk:role name="ConductOrderProvider" portType="tns:ConductOrder"/>
+    <plnk:partnerLinkType name="ConductOrderAsyncPLT">
+        <plnk:role name="ConductOrderAsyncPLRole" portType="tns:ConductOrderAsyncPortType"/>
     </plnk:partnerLinkType>
     
     <plnk:partnerLinkType name="InventoryServicePLT">
@@ -142,7 +142,7 @@
      BINDING DEFINITION - Defines the message format and protocol details
      for a web service.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <binding name="ConductOrderBinding" type="tns:ConductOrder">
+    <binding name="ConductOrderAsyncBinding" type="tns:ConductOrderAsyncPortType">
     	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     	<operation name="process">
     		<soap:operation soapAction="http://group-one/process"/>
@@ -159,8 +159,8 @@
      SERVICE DEFINITION - A service groups a set of ports into
      a service unit.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <service name="ConductOrderService">
-    	<port binding="tns:ConductOrderBinding" name="ConductOrderPort">
+    <service name="ConductOrderAsyncService">
+    	<port binding="tns:ConductOrderAsyncBinding" name="ConductOrderAsyncPort">
     		<soap:address location="http://localhost:8080/ode/processes/ConductOrder-Async"/>
     	</port>
     </service>

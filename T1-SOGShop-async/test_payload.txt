@@ -20,5 +20,5 @@
     </tns:paymentDetails>
     <tns:shipmentDate>2001-01-01</tns:shipmentDate>
   </tns:input>
-  <tns:callbackURL>http://46.101.159.46:33815/ode/processes/InventoryCallbackPort</tns:callbackURL>
+  <tns:callbackPort>32815</tns:callbackPort>
 </tns:ConductOrderRequest>
