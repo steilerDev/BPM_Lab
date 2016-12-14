@@ -1,4 +1,4 @@
-#Sun Dec 11 18:53:24 CET 2016
+#Tue Dec 13 17:12:08 CET 2016
 eclipse.preferences.version=1
-org.eclipse.bpel.ui.bpeleditor.defaultpage=org.eclipse.bpel.ui.bpeleditor.designpage
-ACTIVE_MQ_URL=tcp\://46.101.159.46\:32938
+org.eclipse.bpel.ui.bpeleditor.defaultpage=org.eclipse.bpel.ui.bpeleditor.sourcepage
+ACTIVE_MQ_URL=tcp\://46.101.159.46\:32813

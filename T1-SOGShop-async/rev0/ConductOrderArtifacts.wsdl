@@ -161,7 +161,7 @@
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <service name="ConductOrderService">
     	<port binding="tns:ConductOrderBinding" name="ConductOrderPort">
-    		<soap:address location="http://localhost:8080/ode/processes/ConductOrder"/>
+    		<soap:address location="http://localhost:8080/ode/processes/ConductOrder-Async"/>
     	</port>
     </service>
 </definitions>
