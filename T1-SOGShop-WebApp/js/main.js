@@ -29,7 +29,7 @@ function updateProducts() {
                     '<div class="caption">' +
                     '<h4>' + productList[i]["FlowSOG:name"] + '</h4>' +
                     '<p>Price: ' + productList[i]["FlowSOG:price"] + '€<p>' +
-                    '<p> Weight:' + productList[i]["FlowSOG:weight"] + 'gr</p>' +
+                    '<p> Weight: ' + productList[i]["FlowSOG:weight"] + 'gr</p>' +
                     '<div class="input-group">' +
                     '<input type="text" class="form-control" placeholder="Quantity">' +
                     '<span class="input-group-btn">' +
@@ -100,7 +100,7 @@ function onCheckoutClick() {
                     '<td>' + name + '</td>' +
                     '<td>' + price + ' €</td>' +
                     '<td>' + weight + ' gr</td>' +
-                    '<td><input type="text" class="form-control" value="' + qty + '" placeholder="Quantity"></td>' +
+                    '<td><input type="text" class="form-control" style="width: 55px" value="' + qty + '" placeholder="Quantity"></td>' +
                     '<td><button type="button" class="btn btn-danger delete-item"><span class="glyphicon glyphicon-trash"></span></button></td>' +
                     '</tr>'
                 );
@@ -116,15 +116,13 @@ function onCheckoutClick() {
 
 function onBuyClick() {
     $('#buyBtn').click(function () {
-        var products = [];
+        var product = [];
         $('#shopping-card').children().children().each(function () {
             var qty = parseInt($(this).find("input").val()) || 0;
             if (qty > 0) {
-                products.push({
-                    product: {
-                        productId: $(this).data("id"),
-                        numberOfItems: qty
-                    }
+                product.push({
+                    productId: $(this).data("id"),
+                    numberOfItems: qty
                 });
             }
         });
@@ -144,7 +142,9 @@ function onBuyClick() {
                     accountHolderName: $('#accountHolder').val()
                 },
                 shipmentDate: getCurrentDate(),
-                products: products
+                products: {
+                    product: product
+                }
             }
         };
 
@@ -153,8 +153,8 @@ function onBuyClick() {
         }
 
         toggleCheckoutScreen();
-
         $('#order-processing-content').spin(spinnerOpts);
+        $('#order-processing-content').attr("style", "height: 100px");
         $.soap({
             url: 'http://uni.steilergroup.net:' + port + method,
             method: 'ConductOrderRequest',
@@ -164,14 +164,110 @@ function onBuyClick() {
             data: data,
             success: function(soapResponse) {
                 $('#order-processing-content').spin(false);
-                $('#doneBtn').removeAttribute("disabled");
-                var soapJsonResponse soapResponse.toJSON();
+                $('#doneBtn').removeAttr("disabled");
+                $('#order-processing-content').removeAttr("style");
+                var soapJsonResponse = soapResponse.toJSON();
+                console.log(soapJsonResponse);
 
-                if(soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:status"] == "cancelled") {
+                var customerId = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:customerId"],
+                    accountHolder = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:paymentDetails"].accountHolderName._,
+                    accountNumber = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:paymentDetails"].accountNumber._,
+                    bankAddress = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:paymentDetails"].bankAddress._,
+                    bankName = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:paymentDetails"].bankName._,
+                    shipmentAddress = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:shippingAddress"],
+                    shipmentDate = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:shipmentDate"],
+                    status = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:status"],
+                    result = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:result"]._;
+
+                console.log(result);
+                if(status == "cancelled") {
+                    $('#order-processing-content').append(
+                        '<div class="alert alert-danger" role="alert">' + result + '</div>' +
+                        '<h4>Order Summary</h4>' +
+                        '<table>' +
+                            '<tr>' +
+                                '<td>Customer ID</td>' +
+                                '<td>' + customerId + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td><b>Status</b></td>' +
+                                '<td><b>' + status + '</b></td>' +
+                            '</tr>' +
+                        '</table>'
+                        );
+                } else {
+                    var orderId = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:orderId"],
+                        price = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:price"]._,
+                        productList = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:products"].product
+
+                    $('#order-processing-content').append(
+                        '<div class="alert alert-success" role="alert">' + result + '</div>' +
+                        '<h4>Order Summary</h4>' +
+                        '<table>' +
+                            '<tr>' +
+                                '<td>Order ID</td>' +
+                                '<td>' + orderId + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td>Customer ID</td>' +
+                                '<td>' + customerId + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td>Shipping Address</td>' +
+                                '<td>' + shipmentAddress + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td>Shipping Date</td>' +
+                                '<td>' + shipmentDate + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td><b>Total Value</b></td>' +
+                                '<td><b>' + price + '</b></td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td><b>Status</b></td>' +
+                                '<td><b>' + status + '</b></td>' +
+                            '</tr>' +
+                        '</table>' +
+                        '<h4>Payment Summary</h4>' +
+                        '<table>' +
+                            '<tr>' +
+                                '<td>Account Holder</td>' +
+                                '<td>' + accountHolder + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td>Account Number</td>' +
+                                '<td>' + accountNumber + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td>Bank Name</td>' +
+                                '<td>' + bankName + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td>Bank Address</td>' +
+                                '<td>' + bankAddress + '</td>' +
+                            '</tr>' +
+                        '</table>' +
+                        '<h4>Product Summary</h4>' +
+                        '<table id="productSummaryTable">' +
+                            '<tr>' +
+                                '<th>Product ID</td>' +
+                                '<th>Quantity</th>' +
+                            '</tr>' +
+                        '</table>'
+                    );
+
+                    for(var i in productList) {
+                        $('#productSummaryTable').append(
+                            '<tr>' +
+                                '<td>' + productList[i].productId + '</td>' +
+                                '<td>' + productList[i].numberOfItems + '</td>' +
+                            '</tr>'
+                        )
+                    }
 
                 }
 
-                console.log(soapResponse.toJSON())
             },
             error: function(soapResponse) {
                 $('#spinner').spin(false);
@@ -215,7 +311,9 @@ $(document).ready(function() {
     });
 
     $('#doneBtn').click(function () {
-       toggleCheckoutScreen();
+        $('#checkout').modal('hide');
+        toggleCheckoutScreen();
+        $('#order-processing-content').html("");
         $('#doneBtn').attr("disabled", "disabled");
     });
 
