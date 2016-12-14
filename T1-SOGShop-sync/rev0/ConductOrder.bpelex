@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="ConductOrder.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481721440831" processName="{http://group-one}ConductOrder" processVersion="19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481751827249" processName="{http://group-one}ConductOrder" processVersion="20"/>
   </extensions>
   <extensions>
     <extendedObject href="ConductOrder.bpel#//@activity/@activities.1"/>
@@ -390,6 +390,10 @@
   </extensions>
   <extensions>
     <extendedObject href="ConductOrder.bpel#//@activity/@activities.1/@activity/@faultHandlers/@catch.0/@activity/@activities.0/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="ConductOrder.bpel#//@activity/@activities.7/@copy.8"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
   </extensions>
 </extensionmodel:ExtensionMap>

@@ -80,6 +80,7 @@
                 <complexType>
                     <sequence>
                         <element name="result" type="string"/>
+                        <element name="price" type="decimal" minOccurs="0" maxOccurs="1"/>
                         <element name="order" type="tns:order"/>
                     </sequence>
                 </complexType>
