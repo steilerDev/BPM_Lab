@@ -32,13 +32,16 @@
         <div class="top-bar">
             <div class="row center">
                 <h1>Welcome to SOG Webshop</h1>
-                <!-- Add your site or application content here -->
-                <p>Hello world! This is HTML5 Boilerplate.</p>
-
+                <p>Find the stuff you really need!</p>
 
                 <div class="button-row">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#Settings">
+                    <!-- Button trigger checkout modal -->
+                    <button type="button" id="checkoutBtn" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Checkout
+                    </button>
+
+                    <!-- Button trigger settings modal -->
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#settings">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings
                     </button>
 
@@ -49,7 +52,7 @@
 
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Number of items shown
+                                Change number of items shown
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
@@ -61,17 +64,68 @@
                             </ul>
                         </div>
                     </div>
-
-                    <div id="spinner"></div>
-
                 </div>
-
-
-
             </div>
             <hr>
         </div>
-        <div class="modal fade" id="Settings" tabindex="-1" role="dialog" aria-labelledby="Settings">
+
+        <div id="spinner"></div>
+
+        <div class="modal fade" id="checkout" tabindex="-1" role="dialog" aria-labelledby="checkout">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Checkout</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="order-preparation-content">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address:</label>
+                                <input type="text" class="form-control" id="address">
+                            </div>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="bankName">Bank Name:</label>
+                                <input type="text" class="form-control" id="bankName">
+                            </div>
+                            <div class="form-group">
+                                <label for="bankAddress">Bank Address:</label>
+                                <input type="text" class="form-control" id="bankAddress">
+                            </div>
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number:</label>
+                                <input type="text" class="form-control" id="accountNumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="accountHolder">Account Holder Name:</label>
+                                <input type="text" class="form-control" id="accountHolder">
+                            </div>
+
+                            <hr>
+
+                            <table style="width: 100%" id="shopping-card"></table>
+                        </div>
+                        <div class="hidden" id="order-processing-content">
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="buyBtn">Buy</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Cancel" id="cancelCheckoutButton">Cancel</button>
+                        <button type="button" class="btn btn-primary hidden" id="doneBtn" disabled="disabled">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -85,10 +139,10 @@
                         </div>
 
                         <div class="radio">
-                              <label><input type="radio" name="sync" aria-label="Workflow">Use Synchronous Workflow</label>
+                              <label><input type="radio" name="method" aria-label="Workflow" checked="checked" value="/ode/processes/ConductOrder">Use Synchronous Workflow</label>
                         </div>
                         <div class="radio">
-                              <label><input type="radio" name="async">Use Asynchronous Workflow</label>
+                              <label><input type="radio" name="method" value="/ode/processes/ConductOrder-Async">Use Asynchronous Workflow</label>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -97,6 +151,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row" id="items">
             </div>
