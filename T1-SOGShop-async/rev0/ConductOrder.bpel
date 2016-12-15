@@ -484,7 +484,7 @@
                                 </bpel:from>
                                 <bpel:to part="payload" variable="output">
                                     <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
-                                        <![CDATA[tns:order/tns:orderId]]>
+                                        <![CDATA[tns:order/tns:customerId]]>
                                     </bpel:query>
                                 </bpel:to>
                             </bpel:copy>
@@ -645,9 +645,9 @@
                                         <![CDATA[tns:input/tns:customerId]]>
                                     </bpel:query>
                                 </bpel:from>
-                                <bpel:to part="payload" variable="output">
+                                <bpel:to part="payload" variable="output">
                                     <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
-                                        <![CDATA[tns:order/tns:orderId]]>
+                                        <![CDATA[tns:order/tns:customerId]]>
                                     </bpel:query>
                                 </bpel:to>
                             </bpel:copy>

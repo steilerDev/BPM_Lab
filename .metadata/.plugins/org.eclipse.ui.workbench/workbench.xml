@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="38" version="2.0">
+<workbench progressCount="72" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="599" y="41">
+<window height="768" maximized="true" width="1024" x="1902" y="-321">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -29,7 +29,7 @@
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.bpel.apache.ode.deploy.ui.editors.ODEDeployMultiPageEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" itemType="typePlaceholder" x="104" y="22"/>
-<coolItem id="org.eclipse.bpel.ui.bpeleditor" itemType="typeToolBarContribution" x="293" y="22"/>
+<coolItem id="org.eclipse.bpel.ui.bpeleditor" itemType="typePlaceholder" x="293" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -38,19 +38,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" partName="ConductOrder.bpel" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-sync/rev0/ConductOrder.bpel" title="ConductOrder.bpel" tooltip="T1-SOGShop-sync/rev0/ConductOrder.bpel" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" partName="ConductOrder.bpel" path="C:/Users/steiler/Documents/Repository/BPM_Lab/T1-SOGShop-async/rev0/ConductOrder.bpel" title="ConductOrder.bpel" tooltip="T1-SOGShop-async/rev0/ConductOrder.bpel" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
@@ -99,7 +90,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.bpel.ui.bpeleditor" activePerspective="org.eclipse.bpel.ui.simtech.perspective">
+<perspectives activePart="org.eclipse.apache.ode.processManagement.view" activePerspective="org.eclipse.bpel.ui.simtech.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -223,25 +214,27 @@
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.bpel.ui.simtech.auditingView"/>
 <view id="org.eclipse.apache.ode.processManagement.view"/>
 <view id="de.unistuttgart.iaas.docker.view"/>
 <view id="org.eclipse.pde.runtime.LogView"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="16384" id="bpel.left" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.29969606"/>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="bpel.left">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="bpel.left">
@@ -252,7 +245,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.10509755" ratioLeft="167" ratioRight="1422" relationship="2" relative="bpel.left"/>
-<info folder="true" part="bpel.bottom" ratio="0.69104016" ratioLeft="671" ratioRight="300" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bpel.bottom" ratio="0.4335813" ratioLeft="408" ratioRight="533" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.apache.ode.processManagement.view" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.bpel.ui.simtech.auditingView" label="SimTech Auditing"/>
@@ -282,20 +275,18 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
-</editors>
-<item historyLabel="ConductOrder.bpel" index="0"/>
-<item historyLabel="ConductOrder.bpel" index="0"/>
-<item active="true" historyLabel="ConductOrder.bpel" index="1"/>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="bpel.left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -303,15 +294,16 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bpel.bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-async/rev0/ConductOrder.bpel">
-<persistable path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-sync/rev0/ConductOrder.bpel">
 <persistable path="/T1-SOGShop-sync/rev0/ConductOrder.bpel"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.bpel.ui.bpeleditor" name="ConductOrder.bpel" tooltip="T1-SOGShop-async/rev0/ConductOrder.bpel">
+<persistable path="/T1-SOGShop-async/rev0/ConductOrder.bpel"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ConductOrderArtifacts.wsdl" tooltip="T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl">
 <persistable path="/T1-SOGShop-sync/rev0/ConductOrderArtifacts.wsdl"/>

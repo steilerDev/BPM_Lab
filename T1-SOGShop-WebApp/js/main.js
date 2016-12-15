@@ -198,7 +198,7 @@ function onBuyClick() {
                 } else {
                     var orderId = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:orderId"],
                         price = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:price"]._,
-                        orderProcessingProductList = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:products"];
+                        orderProcessingProductList = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:products"].product;
 
                     $('#order-processing-content').append(
                         '<div class="alert alert-success" role="alert">' + result + '</div>' +
