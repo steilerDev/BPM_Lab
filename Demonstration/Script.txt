@@ -1,0 +1,152 @@
+Available:
+	PICEA MARIANA RESIN
+	44162d90-9315-4acc-980e-cf975c6b9397
+
+	Menthol, Methyl Salicylate
+	3bae3778-8577-4b36-9572-a0b020931ba5
+
+	Salicylic Acid
+	b99a267a-1eba-4c04-b704-d128f85943aa
+
+Not Available:
+	Robitussin Sugar Free Cough
+	1d1d5dcf-de65-44d7-bda3-7a25ee222bde
+
+	Ursodiol
+	66968a93-4ec6-4fa2-bf2d-3b0f59e56738
+
+	Potassium Chloride
+	479e8b20-3697-4609-9ed6-bde2a4b22e41	
+
+
+
+Part 1: Sync Call
+======================================================================================================
+
+a) Two Products, both available:
+<ConductOrderRequest xmlns="http://group-one">
+    <input>
+        <customerId>john@doe.com</customerId>
+        <shippingAddress>Any Street, Any City</shippingAddress>
+        <shipmentDate>2016-12-15</shipmentDate>
+        <paymentDetails>
+            <bankName>Any Bank</bankName>
+            <bankAddress>Bank Street, Any City</bankAddress>
+            <accountNumber>DE32790500001234567891</accountNumber>
+            <accountHolderName>John Doe</accountHolderName>
+        </paymentDetails>
+	    <products>
+            <product>
+                <productId>44162d90-9315-4acc-980e-cf975c6b9397</productId>
+                <numberOfItems>4</numberOfItems>
+            </product>
+            <product>
+                <productId>3bae3778-8577-4b36-9572-a0b020931ba5</productId>
+                <numberOfItems>5</numberOfItems>
+            </product>
+        </products>
+    </input>
+</ConductOrderRequest>
+
+a) Two Products, one not available (second)
+<ConductOrderRequest xmlns="http://group-one">
+    <input>
+        <customerId>john@doe.com</customerId>
+        <shippingAddress>Any Street, Any City</shippingAddress>
+        <shipmentDate>2016-12-15</shipmentDate>
+        <paymentDetails>
+            <bankName>Any Bank</bankName>
+            <bankAddress>Bank Street, Any City</bankAddress>
+            <accountNumber>DE32790500001234567891</accountNumber>
+            <accountHolderName>John Doe</accountHolderName>
+        </paymentDetails>
+	    <products>
+            <product>
+                <productId>44162d90-9315-4acc-980e-cf975c6b9397</productId>
+                <numberOfItems>4</numberOfItems>
+            </product>
+            <product>
+                <productId>479e8b20-3697-4609-9ed6-bde2a4b22e41</productId>
+                <numberOfItems>5</numberOfItems>
+            </product>
+        </products>
+    </input>
+</ConductOrderRequest>
+
+Part 2: Async Call
+======================================================================================================
+
+a) Two Products, both available:
+<ConductOrderRequest xmlns="http://group-one">
+    <input>
+        <customerId>john@doe.com</customerId>
+        <shippingAddress>Any Street, Any City</shippingAddress>
+        <shipmentDate>2016-12-15</shipmentDate>
+        <paymentDetails>
+            <bankName>Any Bank</bankName>
+            <bankAddress>Bank Street, Any City</bankAddress>
+            <accountNumber>DE32790500001234567891</accountNumber>
+            <accountHolderName>John Doe</accountHolderName>
+        </paymentDetails>
+	    <products>
+            <product>
+                <productId>44162d90-9315-4acc-980e-cf975c6b9397</productId>
+                <numberOfItems>4</numberOfItems>
+            </product>
+            <product>
+                <productId>3bae3778-8577-4b36-9572-a0b020931ba5</productId>
+                <numberOfItems>5</numberOfItems>
+            </product>
+        </products>
+    </input>
+    <callbackPort>32795</callbackPort>
+</ConductOrderRequest>
+
+b) Two Products, one not available (second)
+<ConductOrderRequest xmlns="http://group-one">
+    <input>
+        <customerId>john@doe.com</customerId>
+        <shippingAddress>Any Street, Any City</shippingAddress>
+        <shipmentDate>2016-12-15</shipmentDate>
+        <paymentDetails>
+            <bankName>Any Bank</bankName>
+            <bankAddress>Bank Street, Any City</bankAddress>
+            <accountNumber>DE32790500001234567891</accountNumber>
+            <accountHolderName>John Doe</accountHolderName>
+        </paymentDetails>
+	    <products>
+            <product>
+                <productId>44162d90-9315-4acc-980e-cf975c6b9397</productId>
+                <numberOfItems>4</numberOfItems>
+            </product>
+            <product>
+                <productId>479e8b20-3697-4609-9ed6-bde2a4b22e41</productId>
+                <numberOfItems>5</numberOfItems>
+            </product>
+        </products>
+    </input>
+    <callbackPort>32795</callbackPort>
+</ConductOrderRequest>
+
+Part 3: Webshop
+======================================================================================================
+1) Productlist possibilities
+2) Settings (Change Port!)
+3) Select 3 available items:
+	PICEA MARIANA RESIN
+	Menthol, Methyl Salicylate
+	Salicylic Acid
+4) Select unavailable item
+	Robitussin Sugar Free Cough
+5) Go to checkout and enter details
+	ID: john@doe.com
+	Shipping Address: Any Street, Any City
+	Bank Name: Any Bank
+	Bank Address: Bank Street, Any City
+	Account Number: DE32790500001234567891
+	Account Holder: John Doe
+6) Change quantities + Remove unavailble item (Robitussin Sugar Free Cough)
+7) Order
+8) Add unavailble item (Robitussin Sugar Free Cough)
+9) Change method
+10 Order
