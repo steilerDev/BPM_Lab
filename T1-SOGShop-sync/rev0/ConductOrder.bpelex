@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="ConductOrder.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481793189159" processName="{http://group-one}ConductOrder" processVersion="4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481793189159" processName="{http://group-one}ConductOrder" processVersion="2"/>
   </extensions>
   <extensions>
     <extendedObject href="ConductOrder.bpel#//@activity/@activities.1"/>

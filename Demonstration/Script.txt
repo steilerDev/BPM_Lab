@@ -99,7 +99,7 @@ a) Two Products, both available:
             </product>
         </products>
     </input>
-    <callbackPort>32795</callbackPort>
+    <callbackPort>32950</callbackPort>
 </ConductOrderRequest>
 
 b) Two Products, one not available (second)
@@ -125,7 +125,7 @@ b) Two Products, one not available (second)
             </product>
         </products>
     </input>
-    <callbackPort>32795</callbackPort>
+    <callbackPort>32950</callbackPort>
 </ConductOrderRequest>
 
 Part 3: Webshop
