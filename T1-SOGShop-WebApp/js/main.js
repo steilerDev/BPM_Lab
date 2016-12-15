@@ -198,7 +198,7 @@ function onBuyClick() {
                 } else {
                     var orderId = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:orderId"],
                         price = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:price"]._,
-                        productList = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:products"].product
+                        orderProcessingProductList = soapJsonResponse["#document"]["soapenv:Envelope"]["soapenv:Body"]["ConductOrderResponse"]["tns:order"]["tns:products"];
 
                     $('#order-processing-content').append(
                         '<div class="alert alert-success" role="alert">' + result + '</div>' +
@@ -256,14 +256,16 @@ function onBuyClick() {
                             '</tr>' +
                         '</table>'
                     );
-
-                    for(var i in productList) {
-                        $('#productSummaryTable').append(
-                            '<tr>' +
-                                '<td>' + productList[i].productId + '</td>' +
-                                '<td>' + productList[i].numberOfItems + '</td>' +
-                            '</tr>'
-                        )
+                    console.log(orderProcessingProductList);
+                    for(var i in orderProcessingProductList) {
+                        if(orderProcessingProductList[i].productId && orderProcessingProductList[i].numberOfItems) {
+                            $('#productSummaryTable').append(
+                                '<tr>' +
+                                    '<td>' + orderProcessingProductList[i].productId + '</td>' +
+                                    '<td>' + orderProcessingProductList[i].numberOfItems + '</td>' +
+                                '</tr>'
+                            )
+                        }
                     }
 
                 }
